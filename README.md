@@ -15,13 +15,11 @@ Aplikasi Web Tes Kecepatan Mengetik dirancang untuk membantu pengguna mengukur d
 - **Mengetik Teks**: Pengguna mengetik teks yang ditampilkan ke dalam bidang input.
 - **Kirim Tes**: Setelah pengguna selesai mengetik, mereka mengirim tes untuk melihat hasilnya.
 - **Lihat Hasil**: Pengguna melihat hasil kecepatan dan akurasi mengetik mereka.
-- 
 ### Proses Backend
 - **Menghasilkan Teks Acak**: Backend menghasilkan string teks acak yang akan diketik oleh pengguna.
 - **Menghitung Kecepatan**: Backend menghitung kecepatan mengetik pengguna dalam karakter per menit (CPM).
 - **Menghitung Akurasi**: Backend menghitung akurasi mengetik pengguna berdasarkan jumlah kesalahan yang dibuat.
 - **Menyimpan Hasil**: Backend menyimpan hasil kecepatan dan akurasi pengguna ke dalam database.
-- 
 ## Alur Kerja Aplikasi
 1. **Buka Situs Web**
     - Pengguna membuka situs web aplikasi menggunakan browser mereka.
