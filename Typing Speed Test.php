@@ -20,10 +20,11 @@ if (isset($_GET['action']) && $_GET['action'] == 'random-text') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Typing Speed Test</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 50px;
+            margin-top: 50px;
         }
 
         .container {
@@ -44,19 +45,19 @@ if (isset($_GET['action']) && $_GET['action'] == 'random-text') {
 
 <body>
     <div class="container">
-        <h1>Typing Speed Test</h1>
-        <div class="text-display" id="text-display">Loading text...</div>
-        <textarea id="text-input" rows="4" cols="50" disabled></textarea>
-        <br>
-        <button id="start-button">Start Test</button>
-        <button id="submit-button" disabled>Submit Test</button>
-        <div class="results" id="results"></div>
+        <h1 class="text-center mb-4">Typing Speed Test</h1>
+        <div class="text-display border p-3 mb-3" id="text-display">Loading text...</div>
+        <textarea id="text-input" class="form-control mb-3" rows="4" cols="50" disabled></textarea>
+        <div class="text-center">
+            <button id="start-button" class="btn btn-primary">Start Test</button>
+            <button id="submit-button" class="btn btn-success" disabled>Submit Test</button>
+        </div>
+        <div class="results text-center mt-4" id="results"></div>
     </div>
 
     <script>
         let testText = '';
         let startTime;
-        let typedCharacters = 0;
 
         document.getElementById('start-button').addEventListener('click', startTest);
         document.getElementById('submit-button').addEventListener('click', submitTest);
@@ -83,9 +84,9 @@ if (isset($_GET['action']) && $_GET['action'] == 'random-text') {
             const accuracy = (100 * typedText.length / testText.length).toFixed(2);
 
             document.getElementById('results').innerHTML = `
-        <p>Speed: ${speed.toFixed(2)} CPM</p>
-        <p>Accuracy: ${accuracy}%</p>
-      `;
+                <p>Speed: ${speed.toFixed(2)} CPM</p>
+                <p>Accuracy: ${accuracy}%</p>
+            `;
 
             document.getElementById('text-input').disabled = true;
             document.getElementById('submit-button').disabled = true;
