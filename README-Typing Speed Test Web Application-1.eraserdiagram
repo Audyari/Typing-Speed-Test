@@ -1,0 +1,32 @@
+flowchart-diagram
+
+title Typing Speed Test Web Application
+
+// Define groups for better organization
+User Interaction {
+  Open Website [shape: oval, icon: globe]
+  Start Test [icon: play-circle]
+  Type Text [icon: keyboard]
+  Submit Test [icon: send]
+  View Results [icon: bar-chart-2]
+}
+
+Backend Processes {
+  Generate Random Text [icon: file-text]
+  Calculate Speed [icon: activity]
+  Calculate Accuracy [icon: check-circle]
+  Store Results [icon: database]
+}
+
+// Define the flow
+Open Website > Start Test
+Start Test > Generate Random Text
+Generate Random Text > Display Text [icon: monitor]
+Display Text > Type Text
+Type Text > Submit Test
+Submit Test > Calculate Speed
+Submit Test > Calculate Accuracy
+Calculate Speed > Store Results
+Calculate Accuracy > Store Results
+Store Results > View Results
+
